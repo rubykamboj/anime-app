@@ -1,3 +1,13 @@
 package com.rubykamboj.anime.data.network.model
 
-data class Genre()
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Genre(
+    @SerialName("mal_id")
+    val malId: Long,
+    val type: String,
+    val name: String,
+    val url: String,
+)

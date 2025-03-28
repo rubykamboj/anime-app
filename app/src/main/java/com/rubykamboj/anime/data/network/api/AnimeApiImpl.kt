@@ -1,5 +1,6 @@
 package com.rubykamboj.anime.data.network.api
 
+import com.rubykamboj.anime.data.network.response.AnimeDetails
 import com.rubykamboj.anime.data.network.response.TopAnime
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -18,7 +19,9 @@ class AnimeApiImpl(private val client: HttpClient) : AnimeApi {
         return response.body()
     }
 
-    override suspend fun getAnimeDetails(animeId: Int) {
+    override suspend fun getAnimeDetails(animeId: Int): AnimeDetails {
         val url = "$BASE_URL/anime/$animeId"
+        val response = client.get(url)
+        return response.body()
     }
 }

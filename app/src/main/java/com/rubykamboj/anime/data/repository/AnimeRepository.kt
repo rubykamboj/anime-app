@@ -25,4 +25,15 @@ class AnimeRepository @Inject constructor(
             Result.failure(e)
         }
     }
+
+    suspend fun getAnimeDetails(animeId: Int): Result<Anime> {
+        return try {
+            val response = api.getAnimeDetails(animeId)
+            val anime = response.data.toAnime()
+            Result.success(anime)
+        } catch (e: Exception) {
+            Log.e(TAG, "getAnimeDetails: ", e)
+            Result.failure(e)
+        }
+    }
 }

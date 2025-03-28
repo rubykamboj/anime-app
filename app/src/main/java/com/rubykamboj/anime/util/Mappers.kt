@@ -10,5 +10,8 @@ fun AnimeRemote.toAnime(): Anime {
         title = titleEnglish ?: title,
         episodes = episodes,
         rating = rating,
+        youtubeId = trailer?.youtubeId,
+        synopsis = synopsis.trim(),
+        genres = genres,
     )
 }

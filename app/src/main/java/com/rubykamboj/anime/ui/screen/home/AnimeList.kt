@@ -120,6 +120,9 @@ private fun AnimeListPrev() {
                 title = "Frieren: Beyond Journey's End",
                 episodes = 28,
                 rating = "PG-13 - Teens 13 or older",
+                youtubeId = null,
+                synopsis = "",
+                genres = emptyList(),
             ),
             Anime(
                 id = 2,
@@ -127,6 +130,9 @@ private fun AnimeListPrev() {
                 title = "Fullmetal Alchemist: Brotherhood",
                 episodes = 64,
                 rating = "R - 17+ (violence & profanity)",
+                youtubeId = null,
+                synopsis = "",
+                genres = emptyList(),
             ),
         )
     }

@@ -13,4 +13,7 @@ data class AnimeRemote(
     val titleEnglish: String?,
     val episodes: Int,
     val rating: String,
+    val trailer: AnimeTrailer?,
+    val synopsis: String,
+    val genres: List<Genre>,
 )
